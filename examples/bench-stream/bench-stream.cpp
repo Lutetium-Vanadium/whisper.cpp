@@ -281,8 +281,8 @@ int main(int argc, char ** argv) {
         wavWriter.open(filename, WHISPER_SAMPLE_RATE, 16, 1);
     }
 
-    printf("[Start bench]\n");
-    fflush(stdout);
+    fprintf(stderr, "[Start bench]\n");
+    fflush(stderr);
 
     auto t_last  = std::chrono::high_resolution_clock::now();
     const auto t_start = t_last;
